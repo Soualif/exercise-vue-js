@@ -32,6 +32,7 @@ const todoList = {
              this.tasks.push(this.newTask);
              this.newTask = {};
              this.errors = [];
+             this.$refs.name.focus();
 
             //  localStorage.setItem('tasks', JSON.stringify(this.tasks));
 
@@ -45,8 +46,7 @@ const todoList = {
         }
          
     },
-
-
+    
     created(){
         this.tasks = localStorage.getItem('tasks')
         ? JSON.parse(localStorage.getItem('tasks'))
@@ -56,7 +56,8 @@ const todoList = {
     updated(){
         localStorage.setItem('tasks', JSON.stringify(this.
             tasks));
-    }
+    },
+    
 }
 
 Vue.createApp(todoList).mount('#app');

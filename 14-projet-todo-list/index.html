@@ -52,7 +52,8 @@
                     <input type="text" 
                     class="form-control" 
                     placeholder="Ajouter une tâche"
-                    v-model="newTask.name">
+                    v-model="newTask.name"
+                    ref="name">
                     <button @click="addTask()" class="btn btn-primary" type="button">Ajouter</button>
                 </div>
 
